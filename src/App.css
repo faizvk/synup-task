@@ -1,0 +1,187 @@
+#root {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  font-family: "Nunito", sans-serif;
+}
+.app-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  width: 55%;
+}
+
+.top-bar {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.dropdown {
+  position: relative;
+  width: 20%;
+}
+
+.dropdown-button {
+  background-color: white;
+  border: 2px solid black;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 2px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.dropdown-button:hover {
+  opacity: 0.6;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+
+.dropdown-menu.show {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dropdown-menu-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+}
+
+.dropdown-menu-button:hover {
+  opacity: 0.6;
+}
+
+.bar-input {
+  border-radius: 10px;
+  padding: 10px;
+  width: 60%;
+}
+
+.bar-input:focus {
+  outline: none;
+}
+.bar-input::placeholder {
+  color: black;
+  font-size: 1rem;
+}
+
+.search-button {
+  padding: 10px 12px;
+  background-color: #1971c2;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.search-button:hover {
+  opacity: 0.9;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.card {
+  background-color: #e7f5ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 20px;
+  border: 2px solid black;
+  border-radius: 20px;
+}
+
+.card > h2 {
+  color: #1971c2;
+  font-weight: 900;
+}
+
+.card-footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-description {
+  font-size: 0.9rem;
+}
+
+.product-category {
+  font-size: 1.2rem;
+}
+.product-price {
+  font-weight: 900;
+}
+
+@media (max-width: 1024px) {
+  .app-main {
+    width: 80%;
+  }
+
+  .top-bar {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .dropdown {
+    width: 30%;
+  }
+
+  .bar-input {
+    width: 50%;
+  }
+
+  .container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    width: 95%;
+  }
+
+  .top-bar {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .dropdown,
+  .bar-input,
+  .search-button {
+    width: 100%;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
